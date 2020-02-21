@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "FireFinder.API": {
+      "commandName": "Project",
+      "launchUrl": "/api/current",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:5000"
+    }
+  }
+}
