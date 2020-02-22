@@ -42,5 +42,17 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure für Bildungseinrichtungen: Starter (2ce574d8-4c29-4501-bb05-48dc92fabb8d)'
+    appType: 'webAppLinux'
+    WebAppName: 'firefinder'
+    deployToSlotOrASE: true
+    ResourceGroupName: 'FireFinderRessource'
+    SlotName: 'production'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    RuntimeStack: 'DOTNETCORE|Latest'
+    StartupCommand: 'dotnet run'
     publishWebProjects: true
     arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
