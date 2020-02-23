@@ -20,7 +20,7 @@ namespace FireFinder.Controllers
         [HttpGet]
         public async Task<ActionResult<RootObject>> GetSwagger()
         {
-            return Redirect("https://firefinderapi.azurewebsites.net/swagger/");
+            return Redirect("https://firefinder.azurewebsites.net/swagger/");
         }
         [ResponseCache(Duration = 60)]
         [HttpGet("current")]
