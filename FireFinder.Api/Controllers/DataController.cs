@@ -17,6 +17,11 @@ namespace FireFinder.Controllers
             this.dataProvider = prov ?? throw new ArgumentNullException(nameof(dataProvider));
         }
 
+        [HttpGet]
+        public async Task<ActionResult<RootObject>> GetSwagger()
+        {
+            return Redirect("https://firefinderapi.azurewebsites.net/swagger/");
+        }
         [ResponseCache(Duration = 60)]
         [HttpGet("current")]
         public async Task<ActionResult<RootObject>> GetCurrent()
