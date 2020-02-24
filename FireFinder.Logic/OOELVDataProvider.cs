@@ -120,7 +120,7 @@ namespace FireFinder.Logic
                             {
                                 Latitude = lat,
                                 Longitude = lng,
-                                Link = $"https://www.google.com/maps/search/?api=1&query={lat.ToString("G", CultureInfo.InvariantCulture)},{lng.ToString("G", CultureInfo.InvariantCulture)}",
+                                MapsLink = $"https://www.google.com/maps/search/?api=1&query={lat.ToString("G", CultureInfo.InvariantCulture)},{lng.ToString("G", CultureInfo.InvariantCulture)}",
                                 Type = "WGS84"
                             }
                             
