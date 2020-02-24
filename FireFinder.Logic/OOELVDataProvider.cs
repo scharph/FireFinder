@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Net.Http;
 using System.Threading.Tasks;
 using FireFinder.Logic.Models;
@@ -9,12 +10,12 @@ namespace FireFinder.Logic
 {
     public class OOELVDataProvider : IDataProvider
     {
-        private readonly string BASE_URL = "http://intranet.ooelfv.at";
+        private static readonly string BASE_URL = "http://intranet.ooelfv.at";
     
-        private readonly string JSON_LAUFEND = $"{BASE_URL}/webext2/rss/json_laufend.txt";
-        private readonly string JSON_DAILY = $"{BASE_URL}/webext2/rss/json_taeglich.txt";
-        private readonly string JSON_6HOURS = $"{BASE_URL}/webext2/rss/json_6stunden.txt";
-        private readonly string JSON_2DAYS = $"{BASE_URL}/webext2/rss/json_2tage.txt";
+        private static readonly string JSON_LAUFEND = $"{BASE_URL}/webext2/rss/json_laufend.txt";
+        private static readonly string JSON_DAILY = $"{BASE_URL}/webext2/rss/json_taeglich.txt";
+        private static readonly string JSON_6HOURS = $"{BASE_URL}/webext2/rss/json_6stunden.txt";
+        private static readonly string JSON_2DAYS = $"{BASE_URL}/webext2/rss/json_2tage.txt";
 
         HttpClient client;
 
@@ -100,6 +101,8 @@ namespace FireFinder.Logic
                         var coor = einsatz["wgs84"];
                         var addr = einsatz["adresse"];
 
+                        var lat = Convert.ToDouble(coor["lat"].ToString());
+                        var lng = Convert.ToDouble(coor["lng"].ToString());
                         e.Destination = new Destination
                         {
                             Title = einsatz["einsatzort"].ToString(),
@@ -115,11 +118,13 @@ namespace FireFinder.Logic
                             },
                             Geo = new Geo
                             {
-                                Latitude = Convert.ToDouble(coor["lat"].ToString()),
-                                Longitude = Convert.ToDouble(coor["lng"].ToString()),
-                                Link = $"https://www.google.com/maps/search/?api=1&query={Latitude},{Longitude}",
+                                Latitude = lat,
+                                Longitude = lng,
+                                Link = $"https://www.google.com/maps/search/?api=1&query={lat.ToString("G", CultureInfo.InvariantCulture)},{lng.ToString("G", CultureInfo.InvariantCulture)}",
                                 Type = "WGS84"
                             }
+                            
+
                         };
 
                         foreach (var fwdata in einsatz["feuerwehrenarray"].Values())

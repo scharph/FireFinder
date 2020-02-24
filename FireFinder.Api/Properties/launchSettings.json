@@ -2,8 +2,7 @@
   "profiles": {
     "FireFinder.API": {
       "commandName": "Project",
-      "launchBrowser": true,
-      "launchUrl": "/api/current",
+      "launchUrl": "api/current",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

@@ -1,11 +1,12 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FireFinder.Logic", "FireFinder.Logic\FireFinder.Logic.csproj", "{F464A893-088D-4B8E-8487-1343C87B25EF}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FireFinder.Logic", "FireFinder.Logic\FireFinder.Logic.csproj", "{F464A893-088D-4B8E-8487-1343C87B25EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FireFinder.Tests", "FireFinder.Tests\FireFinder.Tests.csproj", "{FD9C5478-5374-429A-BCD8-2AB5C1043D85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FireFinder.Tests", "FireFinder.Tests\FireFinder.Tests.csproj", "{FD9C5478-5374-429A-BCD8-2AB5C1043D85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FireFinder.Api", "FireFinder.Api\FireFinder.API.csproj", "{4E543EA1-6083-49EB-B7BA-13C41BD63C79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FireFinder.API", "FireFinder.Api\FireFinder.API.csproj", "{4E543EA1-6083-49EB-B7BA-13C41BD63C79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,5 +26,11 @@ Global
 		{4E543EA1-6083-49EB-B7BA-13C41BD63C79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E543EA1-6083-49EB-B7BA-13C41BD63C79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E543EA1-6083-49EB-B7BA-13C41BD63C79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {12DF5649-CDFC-4911-A926-6CC60BD88914}
 	EndGlobalSection
 EndGlobal

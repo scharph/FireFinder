@@ -56,12 +56,8 @@ namespace FireFinder
             }
 
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
             app.UseResponseCaching();
-
-            
 
             app.Use(async (context, next) =>
             {
@@ -77,15 +73,13 @@ namespace FireFinder
                 await next();
             });
 
-
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
 
             app.UseOpenApi();
-            app.UseSwaggerUi3(settings => settings.Path = "/swagger");
+            app.UseSwaggerUi3(settings => settings.Path = "/api");
             app.UseReDoc(settings => settings.Path = "/redoc");
 
         }
