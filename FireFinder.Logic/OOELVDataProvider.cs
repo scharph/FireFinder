@@ -117,6 +117,7 @@ namespace FireFinder.Logic
                             {
                                 Latitude = Convert.ToDouble(coor["lat"].ToString()),
                                 Longitude = Convert.ToDouble(coor["lng"].ToString()),
+                                Link = $"https://www.google.com/maps/search/?api=1&query={Latitude},{Longitude}",
                                 Type = "WGS84"
                             }
                         };
