@@ -71,10 +71,8 @@ namespace FireFinder.Logic
                 foreach (var es in rss["einsaetze"].Values())
                 {
                     var einsatz = es["einsatz"];
-                    var dis = Convert.ToInt16(einsatz["bezirk"]["id"].ToString());
 
-                    var val = district == dis || district == null;
-                    if (val)
+                    if (district == Convert.ToInt16(einsatz["bezirk"]["id"].ToString()) || district == null)
                     {
                         Operation e = new Operation
                         {
