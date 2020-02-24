@@ -5,6 +5,7 @@ namespace FireFinder.Logic.Models
     {
         public double Latitude { get; set; }
         public double Longitude { get; set; }
+        public string Link { get; set; }
         public string Type { get; set; }
     }
 }
