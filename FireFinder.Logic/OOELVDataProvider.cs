@@ -9,10 +9,12 @@ namespace FireFinder.Logic
 {
     public class OOELVDataProvider : IDataProvider
     {
-        private readonly string JSON_LAUFEND = "http://intranet.ooelfv.at/webext2/rss/json_laufend.txt";
-        private readonly string JSON_DAILY = "http://intranet.ooelfv.at/webext2/rss/json_taeglich.txt";
-        private readonly string JSON_6HOURS = "http://intranet.ooelfv.at/webext2/rss/json_6stunden.txt";
-        private readonly string JSON_2DAYS = "http://intranet.ooelfv.at/webext2/rss/json_2tage.txt";
+        private readonly string BASE_URL = "http://intranet.ooelfv.at";
+    
+        private readonly string JSON_LAUFEND = $"{BASE_URL}/webext2/rss/json_laufend.txt";
+        private readonly string JSON_DAILY = $"{BASE_URL}/webext2/rss/json_taeglich.txt";
+        private readonly string JSON_6HOURS = $"{BASE_URL}/webext2/rss/json_6stunden.txt";
+        private readonly string JSON_2DAYS = $"{BASE_URL}/webext2/rss/json_2tage.txt";
 
         HttpClient client;
 
