@@ -66,7 +66,7 @@ namespace FireFinder.Logic
 
             ro.Title = rss["title"].ToString();
             ro.LastRefresh = DateTime.Now;
-            ro.Published = DateTime.Parse(rss["pubDate"].ToString());
+            ro.Published = DateTime.Parse(rss["pubDate"].ToString()).ToLocalTime();
             ro.Operations = new List<Operation>();
 
             if (rss["einsaetze"] != null)
