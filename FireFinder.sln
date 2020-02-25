@@ -8,6 +8,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FireFinder.Tests", "FireFin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FireFinder.API", "FireFinder.Api\FireFinder.API.csproj", "{4E543EA1-6083-49EB-B7BA-13C41BD63C79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FireFinder.TypeScriptApiClient", "FireFinder.TypeScriptApiClient\FireFinder.TypeScriptApiClient.csproj", "{4561742E-030F-4E93-AA58-84BEF9D7D3A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{4E543EA1-6083-49EB-B7BA-13C41BD63C79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E543EA1-6083-49EB-B7BA-13C41BD63C79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E543EA1-6083-49EB-B7BA-13C41BD63C79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4561742E-030F-4E93-AA58-84BEF9D7D3A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4561742E-030F-4E93-AA58-84BEF9D7D3A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4561742E-030F-4E93-AA58-84BEF9D7D3A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4561742E-030F-4E93-AA58-84BEF9D7D3A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
