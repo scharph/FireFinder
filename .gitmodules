@@ -1,0 +1,3 @@
+[submodule "FireFinderUI"]
+	path = FireFinderUI
+	url = https://github.com/scharph/FireFinderUI.git
