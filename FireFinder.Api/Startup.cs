@@ -38,6 +38,7 @@ namespace FireFinder
                     .AllowAnyOrigin()
                     .AllowAnyMethod()
                     .AllowAnyHeader()
+                    
                 ));
 
             services.AddOpenApiDocument(
@@ -57,6 +58,7 @@ namespace FireFinder
 
             app.UseHttpsRedirection();
             app.UseRouting();
+            app.UseCors();
             app.UseResponseCaching();
 
             app.Use(async (context, next) =>

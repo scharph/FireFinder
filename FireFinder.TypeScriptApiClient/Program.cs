@@ -17,6 +17,12 @@ namespace FireFinder.TypeScriptApiClient
             var settings = new TypeScriptClientGeneratorSettings
             {
                 ClassName = "{controller}Client",
+                HttpClass = HttpClass.HttpClient,
+                InjectionTokenType = InjectionTokenType.InjectionToken,
+                ImportRequiredTypes = true,
+                Template = TypeScriptTemplate.Angular,
+                GenerateClientClasses = true,
+                GenerateClientInterfaces = true
             };
 
             var generator = new TypeScriptClientGenerator(await document, settings);
