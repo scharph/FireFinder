@@ -40,6 +40,11 @@ namespace FireFinder
                     .AllowAnyHeader()
                     
                 ));
+            
+            services.AddSpaStaticFiles(configuration =>
+            {
+                configuration.RootPath = "FireFinderUI/dist";
+            });
 
             services.AddOpenApiDocument(
                 settings =>
@@ -54,12 +59,28 @@ namespace FireFinder
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSpaStaticFiles();
             }
 
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseCors();
             app.UseResponseCaching();
+
+            app.UseStaticFiles();
+ 
+            app.UseHttpsRedirection();
+            app.UseMvc();
+ 
+            app.UseSpa(spa =>
+            {
+                spa.Options.SourcePath = "FireFinderUI";
+ 
+                if (env.IsDevelopment())
+                {
+                    spa.UseAngularCliServer(npmScript: "start");
+                }
+            });
 
             app.Use(async (context, next) =>
             {
