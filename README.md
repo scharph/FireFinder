@@ -10,7 +10,7 @@ Swagger an Redoc available
 
 ### Debian 10
 
-sudo apt-get install -y dotnet-sdk-5.0
+https://docs.microsoft.com/en-us/dotnet/core/install/linux-debian
 
 dotnet build
 
